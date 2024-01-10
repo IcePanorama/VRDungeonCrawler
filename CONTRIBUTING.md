@@ -42,5 +42,31 @@ Now simply `cd VRDungeonCrawler` and you're ready to start working.
 
 ## Creating contributions
 
-Creating contributions to any project on GitHub usually follows this sequence: we pull the main branch to make sure we're up to date, we create a new branch for our contribution, we make whatever changes we need to make, and then we submit a "Pull Request" to have our changes applied to the main branch of the project.
+Creating contributions to any project on GitHub usually follows this sequence:
 
+* We pull the main branch
+* We create a new branch for our contributions
+* We make whatever changes we need to make
+* Finally, we submit a "Pull Request" to have our changes applied to the main branch of the project.
+
+Let's go step by step in more detail.  For the sake of explanation, we're going to imagine that you want to add a feature to the project where the player can pick up coins.
+
+### Pulling the main branch
+
+We don't want to make changes to the project without first ensuring that our local copy of the repo is the latest possible verision of the repo available.
+
+This can be accomplished in a single command: ``git pull origin main``.
+
+### Creating a new branch
+
+Our main branch (hopefully) works fine! We don't want to potentially mess up our main branch by making changes directly to it.
+
+In order to prevent such a thing from happening, we're going to create a new branch where we can make our changes.
+
+```bash
+git checkout -b coin-pickups
+```
+
+We now have a brand new branch called coin-pickups!
+
+The `git checkout -b` part is what's really important here. You can name your new branch whatever you like, although it's considered best practice to give the branch a good, descriptive name.
