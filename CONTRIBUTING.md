@@ -49,7 +49,9 @@ Creating contributions to any project on GitHub usually follows this sequence:
 * We make whatever changes we need to make
 * Finally, we submit a "Pull Request" to have our changes applied to the main branch of the project.
 
-Let's go step by step in more detail.  For the sake of explanation, we're going to imagine that you want to add a feature to the project where the player can pick up coins.
+Let's go step by step in more detail.
+
+For the sake of explanation, we're going to imagine that you want to add a feature to the project where the player can pick up coins.
 
 ### Pulling the main branch
 
@@ -70,3 +72,38 @@ git checkout -b coin-pickups
 We now have a brand new branch called coin-pickups!
 
 The `git checkout -b` part is what's really important here. You can name your new branch whatever you like, although it's considered best practice to give the branch a good, descriptive name.
+
+### Tracking changes
+
+As you work on whatever feature/bugfix you're working on, you can track changes with the following three commands:
+
+```bash
+git add . # Adds all edited files to your next commit
+# Alternatively run, git add example_file.exe, if you only want to commit changes to a specific file
+git commit -m "Foo bar" # Make your message descriptive, e.g. "imported coin model"
+```
+It's considered best practice to make your commits as small as possbile.
+
+An example of a bad commit would be: "Added coin model, added collision shape to coin, did some other stuff".
+
+Commits ideally should do one thing. This makes it easier for us to revert back to old versions if issues arise.
+
+Secondly, "did some other stuff" is incredibly vague. Be specific. If you made a lot of tiny changes to a file, something like "Refactored file.txt" is a better alternative.
+
+### Submitting a "Pull Request"
+
+Once all your work is done, run the following command to push your changes to GitHub:
+
+```bash
+git push origin coin-pickups
+```
+
+Next, open up GitHub in your browser, navigate to the VRDungeonCrawler repository, and you should see something that says "Your recently pushed branches:".
+
+Below that, you should see a button which says "Compare & pull request".
+
+Click on that button, write a comment describing what you did in the comment box, scroll down to the bottom of the page and hit "Create pull request".
+
+At this stage, your changes have officially been pushed to GitHub, but they haven't yet been applied to our main branch. First, someone (probably me) should to check your code for potential conflicts.
+
+Congratulations, you've made your first contribution on GitHub!
