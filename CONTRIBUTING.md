@@ -12,7 +12,7 @@ This guide will explain the Git route as that's what I'm most familiar with, but
 
 ## Getting ready for your first contribution
 
-If it's your first time working on a project, you first need to clone the repository onto your local machine so that you can work on it.
+If it's your first time working on a project, you'll first need to clone the repository onto your local machine so that you can work on it.
 
 This can be done in one of two ways (it doesn't matter which way you choose). Just open a command prompt or terminal wherever you want the project to be on your local machine and enter one of the following commands:
 
@@ -38,16 +38,16 @@ Receiving objects: 100% (19/19), done.
 Resolving deltas: 100% (6/6), done.
 ```
 
-Now simply `cd VRDungeonCrawler` and you're ready to start working.
+Now simply type `cd VRDungeonCrawler` and you're ready to start working.
 
 ## Creating contributions
 
 Creating contributions to any project on GitHub usually follows this sequence:
 
-* We pull the main branch
-* We create a new branch for our contributions
-* We make whatever changes we need to make
-* Finally, we submit a "Pull Request" to have our changes applied to the main branch of the project.
+* [We pull the main branch](#pulling-the-main-branch),
+* [We create a new branch for our contributions](#creating-a-new-branch),
+* [We make whatever changes we need to make](#tracking-changes),
+* Finally, [we submit a "Pull Request" to have our changes applied to the main branch of the project](#submitting-a-pull-request).
 
 Let's go step by step in more detail.
 
@@ -75,22 +75,25 @@ The `git checkout -b` part is what's really important here. You can name your ne
 
 ### Tracking changes
 
-As you work on whatever feature/bugfix you're working on, you can track changes with the following three commands:
+As you work on whatever feature/bugfix you're working on, you can track changes with the following two commands:
 
 ```bash
 git add . # Adds all edited files to your next commit
 # Alternatively run, git add example_file.exe, if you only want to commit changes to a specific file
+
 git commit -m "Foo bar" # Make your message descriptive, e.g. "imported coin model"
 ```
 It's considered best practice to make your commits as small as possbile.
 
 An example of a bad commit would be: "Added coin model, added collision shape to coin, did some other stuff".
 
-Commits ideally should do one thing. This makes it easier for us to revert back to old versions if issues arise.
+Commits ideally should do one thing (i.e., "Added coin model" and "added collision shape to coin" should ideally be separate commits). This makes it easier for us to revert back to older versions of our project if issues arise.
 
-Secondly, "did some other stuff" is incredibly vague. Be specific. If you made a lot of tiny changes to a file, something like "Refactored file.txt" is a better alternative.
+Secondly, "did some other stuff" is incredibly vague. Be specific. 
 
-### Submitting a "Pull Request"
+If you made a lot of tiny changes to a file, something like "Refactored file.txt" is a better alternative.
+
+### Submitting a Pull Request
 
 Once all your work is done, run the following command to push your changes to GitHub:
 
@@ -98,12 +101,18 @@ Once all your work is done, run the following command to push your changes to Gi
 git push origin coin-pickups
 ```
 
-Next, open up GitHub in your browser, navigate to the VRDungeonCrawler repository, and you should see something that says "Your recently pushed branches:".
+Next, open up GitHub in your browser. Navigate to the VRDungeonCrawler repository, and look for the message which reads, "Your recently pushed branches:".
 
-Below that, you should see a button which says "Compare & pull request".
+Below that, you should see a button which says "Compare & pull request". Click on that button.
 
-Click on that button, write a comment describing what you did in the comment box, scroll down to the bottom of the page and hit "Create pull request".
+On the next page, write a comment describing what you did in the comment box.
+
+Finally, scroll down to the bottom of the page and hit "Create pull request".
 
 At this stage, your changes have officially been pushed to GitHub, but they haven't yet been applied to our main branch. First, someone (probably me) should to check your code for potential conflicts.
 
 Congratulations, you've made your first contribution on GitHub!
+
+### Video explanation
+
+Sometimes seeing this process done is easier to follow than just reading what I've written here. [I'd recommend this video if you'd like to see how the process is done for yourself](https://youtu.be/MnUd31TvBoU).
