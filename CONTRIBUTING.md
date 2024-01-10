@@ -79,7 +79,8 @@ As you work on whatever feature/bugfix you're working on, you can track changes 
 
 ```bash
 git add . # Adds all edited files to your next commit
-# Alternatively run, git add example_file.exe, if you only want to commit changes to a specific file
+# Alternatively,
+git add example_file.exe # if you only want to commit changes to a specific file
 
 git commit -m "Foo bar" # Make your message descriptive, e.g. "imported coin model"
 ```
